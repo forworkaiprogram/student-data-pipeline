@@ -1,0 +1,17 @@
+﻿student_id,student_name,age,major,city,gpa,attendance,status,avg_score,total_credits,courses,clubs,library_visits,participation_score,behavior,scholarship,registration_status,semester,performance_level,attendance_status,scholarship_status,engagement_level
+1001,Ahmed Ali,21,Computer Science,Sanaa,3.45,92,Active,87.5,7,"Data Structures, Introduction to Programming",Robotics,12,85,Excellent,False,Registered,2024-Fall,Very Good,Good,No,High
+1002,Sara Mohammed,22,Artificial Intelligence,Aden,3.8,95,Active,91.5,6,"Introduction to Programming, Machine Learning","AI Club, Debate",25,95,Excellent,True,Registered,2024-Fall,Excellent,Good,Yes,High
+1003,Omar Hassan,20,Information Systems,Taiz,2.9,80,Active,72.5,6,"Database Systems, Introduction to Programming",Sports,5,70,Good,False,Registered,2024-Fall,Good,Good,No,Medium
+1004,Layla Saleh,23,Computer Science,Sanaa,3.1,88,Active,82.5,7,"Data Structures, Web Development","Art, Reading",18,82,Very Good,False,Registered,2024-Fall,Very Good,Good,No,Medium
+1005,Khaled Nasser,19,Cybersecurity,Sanaa,2.5,70,Active,60.0,3,Introduction to Programming,,2,55,Average,False,Registered,2024-Fall,Good,Low,No,Low
+1006,Mona Ahmed,24,Data Science,Aden,3.95,98,Active,98.0,3,Machine Learning,"AI Club, Robotics",30,98,Excellent,True,Registered,2024-Fall,Excellent,Good,Yes,High
+1010,Sami Yahya,25,Cybersecurity,Aden,3.3,85,Active,88.0,3,Introduction to Programming,Cybersecurity Club,15,88,Very Good,False,Registered,2024-Fall,Very Good,Good,No,High
+1011,Noor Mohammed,22,Data Science,Sanaa,3.6,90,Active,92.0,3,Machine Learning,Reading,20,90,Excellent,False,Registered,2024-Fall,Excellent,Good,No,High
+1012,Rami Saleh,20,Computer Science,Taiz,1.8,65,Active,65.0,3,Web Development,Sports,3,50,Average,False,Registered,2024-Fall,At Risk,Low,No,Low
+1013,Yousef Kamal,26,Software Engineering,Sanaa,3.2,78,Active,82.0,4,Data Structures,"Robotics, Math",10,80,Very Good,False,Registered,2024-Fall,Very Good,Good,No,Medium
+1014,Fatima Nasser,19,Artificial Intelligence,Aden,3.75,96,Active,96.0,3,Machine Learning,AI Club,22,92,Excellent,True,Registered,2024-Fall,Excellent,Good,Yes,High
+1016,Maryam Hassan,21,Data Science,Taiz,3.55,91,Active,88.0,3,Database Systems,"Reading, Debate",16,87,Very Good,False,Registered,2024-Fall,Excellent,Good,No,High
+1017,Ibrahim Qasem,23,Software Engineering,Ibb,3.9,94,Active,93.0,3,Machine Learning,"Math Club, Robotics",28,96,Excellent,True,Registered,2024-Fall,Excellent,Good,Yes,High
+1018,Aisha Muthanna,20,Computer Science,Sanaa,3.15,83,Active,86.0,3,Web Development,Art,11,78,Good,False,Registered,2024-Fall,Very Good,Good,No,Medium
+1019,Hassan Alwan,17,Information Systems,Aden,2.7,68,Active,72.0,3,Introduction to Programming,,1,45,Average,False,Registered,2024-Fall,Good,Low,No,Low
+1020,Salma Rashad,22,Artificial Intelligence,Ibb,3.65,89,Active,89.0,4,Data Structures,"AI Club, Reading",19,91,Excellent,False,Registered,2024-Fall,Excellent,Good,No,High

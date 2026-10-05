@@ -1,0 +1,5 @@
+﻿student_id,error_reason
+1007,Invalid Age: 150; Invalid GPA: 5.0; Invalid Attendance: 150
+1008,Missing Age
+1009,Missing source data (PostgreSQL)
+1015,Invalid Age: 45
