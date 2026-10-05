@@ -1,4 +1,4 @@
-"""HTML Source — Scraping لبيانات المقررات."""
+
 import pandas as pd
 from bs4 import BeautifulSoup
 from app.config import HTML_FILE

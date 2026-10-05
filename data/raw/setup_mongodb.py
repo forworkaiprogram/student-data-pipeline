@@ -1,4 +1,4 @@
-"""setup_mongodb.py — تجهيز MongoDB بالبيانات."""
+#تجهيز MongoDB بالبيانات.
 from pymongo import MongoClient
 
 

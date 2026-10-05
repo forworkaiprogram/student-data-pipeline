@@ -1,4 +1,4 @@
-"""MongoDB Source — استخراج الأنشطة الطلابية."""
+#MongoDB Source — استخراج الأنشطة الطلابية.
 import pandas as pd
 from pymongo import MongoClient
 from app.config import MONGODB_URI, MONGODB_DB, MONGODB_COLLECTION

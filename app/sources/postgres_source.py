@@ -1,4 +1,4 @@
-"""PostgreSQL Source — استخراج السجلات الأكاديمية."""
+#PostgreSQL Source — استخراج السجلات الأكاديمية.
 import pandas as pd
 import psycopg2
 from app.config import POSTGRES_CONFIG

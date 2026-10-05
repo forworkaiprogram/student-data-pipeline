@@ -1,4 +1,4 @@
-"""Main Pipeline — تشغيل ETL بـ 5 مصادر."""
+# تشغيل ETL بـ 5 مصادر.
 import time
 from app.sources.csv_source import extract_csv
 from app.sources.postgres_source import extract_postgres

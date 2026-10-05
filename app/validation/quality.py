@@ -1,4 +1,4 @@
-"""Quality Module — قواعد جودة شاملة."""
+#قواعد الجودة.
 import pandas as pd
 from app.config import QUALITY_RULES
 from app.utils.logger import logger

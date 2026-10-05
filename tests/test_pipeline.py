@@ -1,7 +1,7 @@
-"""
-Unit Tests — اختبارات شاملة لـ Pipeline.
-تغطي 5 مصادر + قواعد الجودة + التكامل.
-"""
+
+# اختبارات شاملة Pipeline.
+#تغطي 5 مصادر + قواعد الجودة + التكامل.
+
 
 import unittest
 import os
@@ -19,9 +19,7 @@ from app.validation.quality import validate_data
 
 class TestPipeline(unittest.TestCase):
 
-    # ================================================================
-    # 1) اختبارات المصادر الخمسة
-    # ================================================================
+    #  اختبارات المصادر الخمسة
 
     def test_01_csv_loaded(self):
         """Test 1: هل تم تحميل CSV؟"""
@@ -61,9 +59,7 @@ class TestPipeline(unittest.TestCase):
         self.assertIn('registration_status', df.columns)
         print(f"\n   API rows: {len(df)}")
 
-    # ================================================================
-    # 2) اختبارات Cleaner
-    # ================================================================
+    #  اختبارات Cleaner
 
     def test_06_duplicates_removed(self):
         """Test 6: هل تمت إزالة التكرارات؟"""
@@ -85,16 +81,13 @@ class TestPipeline(unittest.TestCase):
             'attendance': [90, 85, 95]
         })
         cleaned = handle_missing_values(df)
-        # age قد تبقى NaN (لا نعوّضها)، لكن gpa و attendance يجب أن تُعوّضا
         self.assertFalse(cleaned['gpa'].isna().any(),
                          "gpa يجب أن يُعوّض بالمتوسط")
         self.assertFalse(cleaned['attendance'].isna().any(),
                          "attendance يجب أن يُعوّض بالمتوسط")
         print(f"\n   Missing values handled")
 
-    # ================================================================
-    # 3) اختبارات Validation
-    # ================================================================
+    #  اختبارات Validation
 
     def test_08_invalid_rejected(self):
         """Test 8: هل تم رفض البيانات غير الصالحة؟"""
@@ -111,9 +104,9 @@ class TestPipeline(unittest.TestCase):
         self.assertEqual(len(rejected), 2, "يجب رفض سجلين")
         print(f"\n   Valid: {len(valid)}, Rejected: {len(rejected)}")
 
-    # ================================================================
-    # 4) اختبار Integration
-    # ================================================================
+   
+    #  اختبار Integration
+    
 
     def test_09_integration(self):
         """Test 9: هل تم دمج المصادر بنجاح؟"""
@@ -142,9 +135,7 @@ class TestPipeline(unittest.TestCase):
         self.assertIn('registration_status', result.columns)
         print(f"\n   Integrated columns: {len(result.columns)}")
 
-    # ================================================================
-    # 5) اختبار نهائي
-    # ================================================================
+ 
 
     def test_10_final_dataset_created(self):
         """Test 10: هل تم إنشاء final_dataset.csv؟"""
@@ -158,7 +149,7 @@ class TestPipeline(unittest.TestCase):
             os.path.exists('data/rejected/rejected_records.csv'),
             "rejected_records.csv يجب أن يُنشأ"
         )
-        # تحقق أن الملف غير فارغ
+        # تحقق  الملف غير فارغ
         df = pd.read_csv('data/processed/final_dataset.csv')
         self.assertGreater(len(df), 0, "final_dataset.csv يجب أن يحتوي بيانات")
         print(f"\n   Final dataset: {len(df)} rows, {len(df.columns)} columns")

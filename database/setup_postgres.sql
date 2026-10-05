@@ -1,13 +1,11 @@
--- ============================================
--- setup_postgres.sql
+
 -- إنشاء الجداول وإدخال البيانات الأولية
--- ============================================
+
 
 DROP TABLE IF EXISTS enrollments CASCADE;
 DROP TABLE IF EXISTS courses CASCADE;
 DROP TABLE IF EXISTS academic_records CASCADE;
 
--- جدول السجلات الأكاديمية
 CREATE TABLE academic_records (
     id SERIAL PRIMARY KEY,
     student_id INTEGER NOT NULL UNIQUE,
@@ -17,14 +15,12 @@ CREATE TABLE academic_records (
     enrolled_date DATE DEFAULT CURRENT_DATE
 );
 
--- جدول المقررات
 CREATE TABLE courses (
     course_id INTEGER PRIMARY KEY,
     course_name VARCHAR(100) NOT NULL,
     credit_hours INTEGER
 );
 
--- جدول التسجيلات
 CREATE TABLE enrollments (
     enrollment_id SERIAL PRIMARY KEY,
     student_id INTEGER REFERENCES academic_records(student_id),
@@ -33,7 +29,6 @@ CREATE TABLE enrollments (
     score NUMERIC(5, 2)
 );
 
--- إدخال المقررات
 INSERT INTO courses (course_id, course_name, credit_hours) VALUES
     (1, 'Introduction to Programming', 3),
     (2, 'Data Structures', 4),
@@ -41,7 +36,7 @@ INSERT INTO courses (course_id, course_name, credit_hours) VALUES
     (4, 'Machine Learning', 3),
     (5, 'Web Development', 3);
 
--- إدخال السجلات الأكاديمية (تتضمن قيم غير صالحة للاختبار)
+
 INSERT INTO academic_records (student_id, gpa, attendance, status) VALUES
     (1001, 3.45, 92, 'Active'),
     (1002, 3.80, 95, 'Active'),
@@ -63,7 +58,7 @@ INSERT INTO academic_records (student_id, gpa, attendance, status) VALUES
     (1019, 2.70, 68, 'Active'),
     (1020, 3.65, 89, 'Active');
 
--- إدخال التسجيلات
+##
 INSERT INTO enrollments (student_id, course_id, semester, score) VALUES
     (1001, 1, '2024-Fall', 85),
     (1001, 2, '2024-Fall', 90),
@@ -88,7 +83,7 @@ INSERT INTO enrollments (student_id, course_id, semester, score) VALUES
     (1019, 1, '2024-Fall', 72),
     (1020, 2, '2024-Fall', 89);
 
--- تحقق نهائي من الإدخال
+# تحقق 
 SELECT 'academic_records' AS table_name, COUNT(*) AS rows FROM academic_records
 UNION ALL
 SELECT 'courses', COUNT(*) FROM courses

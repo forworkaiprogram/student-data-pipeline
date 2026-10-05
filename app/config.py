@@ -1,32 +1,32 @@
 
 
-# ---------- مسارات الملفات ----------
+#  مسارات الملفات 
 CSV_FILE = 'data/raw/students.csv'
 HTML_FILE = 'data/raw/courses.html'
 FINAL_OUTPUT = 'data/processed/final_dataset.csv'
 REJECTED_OUTPUT = 'data/rejected/rejected_records.csv'
 LOG_FILE = 'logs/pipeline.log'
 
-# ---------- PostgreSQL ----------
+# PostgreSQL 
 
 POSTGRES_CONFIG = {
     'host': 'localhost',
     'port': 5432,
     'database': 'students_db',
     'user': 'postgres',
-    'password': 'YOUR_PASSWORD_HERE',  # ← غيّر هذا
+    'password': 'YOUR_PASSWORD_HERE',  
 }
 
-# ---------- MongoDB ----------
+#  MongoDB 
 MONGODB_URI = 'mongodb://localhost:27017/'
 MONGODB_DB = 'students_db'
 MONGODB_COLLECTION = 'student_activities'
 
-# ---------- REST API ----------
+#  REST API 
 API_URL = None
 USE_MOCK_API = True
 
-# ---------- قواعد الجودة ----------
+# قواعد الجودة 
 QUALITY_RULES = {
     'age_min': 16,
     'age_max': 30,

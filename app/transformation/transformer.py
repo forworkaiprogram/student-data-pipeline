@@ -1,4 +1,4 @@
-"""Transformer Module — تحويل الأنواع وإضافة الأعمدة المشتقة."""
+# تحويل الأنواع وإضافة الأعمدة المشتقة.
 import pandas as pd
 from app.utils.logger import logger
 

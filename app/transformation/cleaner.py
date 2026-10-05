@@ -1,4 +1,4 @@
-"""Cleaner Module — تنظيف النصوص، التكرارات، القيم المفقودة."""
+# تنظيف النصوص، التكرارات، القيم المفقودة.
 import re
 import pandas as pd
 from app.utils.logger import logger

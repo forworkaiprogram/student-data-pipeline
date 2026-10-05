@@ -1,4 +1,4 @@
-"""REST API Source — استخراج بيانات التسجيل (Mock)."""
+#REST API Source — استخراج بيانات التسجيل (Mock).
 import pandas as pd
 import requests
 from app.config import API_URL, USE_MOCK_API

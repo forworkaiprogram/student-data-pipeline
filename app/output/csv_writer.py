@@ -1,4 +1,4 @@
-"""CSV Writer — حفظ المخرجات النهائية."""
+#CSV Writer — حفظ المخرجات النهائية.
 import os
 import pandas as pd
 from app.config import FINAL_OUTPUT, REJECTED_OUTPUT
