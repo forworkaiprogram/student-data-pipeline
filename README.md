@@ -4,7 +4,7 @@
 
 ---
 
-## 📖 1. Project Overview
+ 1. Project Overview
 
 في بيئات العمل الحقيقية، نادراً ما تكون البيانات موجودة في مصدر واحد. هذا المشروع يحاكي سيناريو واقعياً في مؤسسة تعليمية، حيث تكون بيانات الطلاب موزعة على أنظمة مختلفة.
 
@@ -12,9 +12,9 @@
 
 ---
 
-## 🏗️ 2. Architecture
+ 2. Architecture
 
-### هيكل المشروع
+# هيكل المشروع
 student_data_pipeline/
 │
 ├── app/
@@ -67,7 +67,7 @@ student_data_pipeline/
 text
 
 
-### الطبقات (Layers)
+# الطبقات (Layers)
 
 ┌─────────────────────────────────────────────────┐
 │ SOURCES (5 مصادر) │
@@ -108,41 +108,41 @@ text
 
 ---
 
-## 🔄 4. ETL Pipeline
+ 4. ETL Pipeline
 
 ### المراحل
 
-#### 1️⃣ Extract — الاستخراج
+# Extract — الاستخراج
 - قراءة البيانات من 5 مصادر مختلفة
 - كل مصدر له وحدته الخاصة في `app/sources/`
 
-#### 2️⃣ Clean — التنظيف
+# Clean — التنظيف
 - إزالة المسافات الزائدة (`re.sub`)
 - توحيد حالة الأحرف (Title Case)
 - إزالة التكرارات (`drop_duplicates`)
 - معالجة القيم المفقودة
 
-#### 3️⃣ Integrate — الدمج
+# Integrate — الدمج
 - دمج البيانات على `student_id`
 - استخدام `left join` للحفاظ على كل السجلات
 - إثراء CSV ببيانات من باقي المصادر
 
-#### 4️⃣ Transform — التحويل
+# Transform — التحويل
 - تحويل الأنواع (`age`: int، `gpa`: float)
 - إضافة الأعمدة المشتقة
 
-#### 5️⃣ Validate — التحقق
+# Validate — التحقق
 - تطبيق 7 قواعد جودة
 - فصل السجلات الصالحة عن المرفوضة
 
-#### 6️⃣ Load — التحميل
+# Load — التحميل
 - حفظ `final_dataset.csv`
 - حفظ `rejected_records.csv`
 - تسجيل كل شيء في `logs/pipeline.log`
 
 ---
 
-## ✅ 5. Data Quality Rules
+# 5. Data Quality Rules
 
 | # | القاعدة | الشرط |
 |---|---------|-------|
@@ -158,7 +158,7 @@ text
 
 ---
 
-## 🛠️ 6. Installation
+# 6. Installation
 
 ### المتطلبات الأساسية
 
@@ -166,7 +166,7 @@ text
 - PostgreSQL 14+
 - MongoDB 6+
 
-### الخطوات
+# الخطوات
 
 ```bash
 # 1) استنسخ المشروع
@@ -190,7 +190,7 @@ python data/raw/setup_mongodb.py
 
 # 6) عدّل app/config.py بكلمة مرور PostgreSQL
 
-🚀 7. Running
+#  7. Running
 تشغيل Pipeline الكامل
 bash
 
@@ -215,7 +215,7 @@ Valid Records        : 16
 Rejected Records     : 4
 Processing Time      : 0.15 seconds
 
-📤 8. Output
+ 8. Output
 الملف	الوصف
 data/processed/final_dataset.csv	Dataset نهائي (16 سجل × 22 عمود)
 data/rejected/rejected_records.csv	السجلات المرفوضة (4 سجلات)
@@ -227,7 +227,7 @@ logs/pipeline.log	سجل كامل للتنفيذ
 الأنشطة	clubs, library_visits, participation_score, behavior, scholarship
 التسجيل	registration_status, semester
 المشتقة	performance_level, attendance_status, scholarship_status, engagement_level
-🎓 9. Answers to Final Questions
+ 9. Answers to Final Questions
 1. لماذا نحتاج إلى Data Pipeline عند التعامل مع مصادر متعددة؟
 
 لأن البيانات في الواقع موزعة على أنظمة مختلفة (قواعد بيانات، ملفات، APIs). بدون Pipeline:
@@ -335,17 +335,18 @@ Validation تضمن أن البيانات الداخلة للتحليل موثو
 التعقيد	أقل	أعلى
 الأدوات	Airflow, Spark	Kafka, Flink
 الاستخدام	التقارير اليومية	IoT, Fraud Detection
-🏆 10. Excellence Features (Bonus)
+ 10. Excellence Features (Bonus)
 الميزة	الحالة
-Pipeline Metrics	✅ ملخص تنفيذي كامل
-Multi-Source Integration	✅ 5 مصادر
-Data Lineage	🔄 (يمكن إضافته)
-Reusable Architecture	✅ كل مصدر في ملف منفصل
-Error Handling	✅ try/except في كل مصدر
-👨‍💻 Author
+Pipeline Metrics	 ملخص تنفيذي كامل
+Multi-Source Integration	 5 مصادر
+Data Lineage	(يمكن إضافته)
+Reusable Architecture	كل مصدر في ملف منفصل
+Error Handling	 try/except في كل مصدر
+ Author
+محمد مبروك ناصر الدربي
+طالب اعداد مهندسي الذكاء الاصطناعي
 
-طالب هندسة البيانات
-التكليف العملي الشامل — Multi-Source Data Integration Pipeline
-📝 License
+
+ License
 
 هذا المشروع لأغراض تعليمية
